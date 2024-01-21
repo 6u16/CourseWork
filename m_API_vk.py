@@ -68,6 +68,9 @@ class APIvk_client:  # класс для взаимодействия с вк
             if not os.path.isdir('Images/' + album_name):
                 os.mkdir('Images/' + album_name)
             file_path = os.path.join(os.getcwd(), 'Images/' + album_name)
+            
+            if not os.path.isdir('Data_files/'): # Создание папки Data_files
+                os.mkdir('Data_files/')
         
         except Exception:   
                 return 'FileNameERROR or ValueERROR or AuthorizationERROR'
